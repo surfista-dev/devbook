@@ -27,7 +27,7 @@ func Carregar() {
 		log.Fatal(erro)
 	}
 
-	Porta, erro = strconv.Atoi(os.Getenv("API_PORT"))
+	Porta, erro = strconv.Atoi(os.Getenv("APP_PORT"))
 	if erro != nil {
 		log.Fatal(erro)
 	}
