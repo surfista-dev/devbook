@@ -54,6 +54,6 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 	usuarioID := strconv.FormatUint(usuarioSalvoNoBanco.ID, 10)
 
-	respostas.JSON(w, http.StatusOK, modelos.DadosAtenticacao{ID: usuarioID, Token: token})
+	respostas.JSON(w, http.StatusOK, modelos.DadosAutenticacao{ID: usuarioID, Token: token})
 
 }

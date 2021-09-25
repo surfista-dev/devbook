@@ -1,6 +1,6 @@
-$('#login').on('submit', fazerlogin);
+$('#login').on('submit', fazerLogin);
 
-function fazerlogin(evento) {
+function fazerLogin(evento) {
     evento.preventDefault();
 
     $.ajax({
@@ -12,8 +12,9 @@ function fazerlogin(evento) {
         }
     }).done(function(){
         window.location = "/home";
-    }).fail(function(){
-        alert("Usuário ou senha inválidos")
-    })
+    }).fail(function(erro){
+        console.log(erro);
+        alert("Usuário ou senha inválidos");
+    });
     
 }
