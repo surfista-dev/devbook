@@ -8,5 +8,15 @@
 </head>
 <body>
     <h2>Pagina Principal</h2>
+
+    {{ range .Publicacoes }}
+        <h4>ID: {{.ID}}</h4>
+        <h4>Titulo: {{.Titulo}}</h4>
+        <h4>Conteudo: {{.Conteudo}}</h4>
+        <h4>Data da criação: {{.CriadoEm}}</h4>
+
+        <hr/>
+    {{ end }}
+    <h1>{{ .Outrocampo }}</h1>
 </body>
 </html>
