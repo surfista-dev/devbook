@@ -22,6 +22,7 @@ func Autenticar(proximaFuncao http.HandlerFunc) http.HandlerFunc {
 			http.Redirect(w, r, "/login", http.StatusMovedPermanently)
 			return
 		}
+
 		proximaFuncao(w, r)
 	}
 }
