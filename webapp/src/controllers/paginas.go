@@ -43,11 +43,5 @@ func CarregarPaginaPrincipal(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	utils.ExecutarTemplates(w, "home.html", struct {
-		Publicacoes []modelos.Publicacao
-		Outrocampo  string
-	}{
-		Publicacoes: publicacoes,
-		Outrocampo:  "Valor Qualquer",
-	})
+	utils.ExecutarTemplates(w, "home.html", publicacoes)
 }
